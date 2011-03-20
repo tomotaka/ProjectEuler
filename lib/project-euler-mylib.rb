@@ -52,3 +52,18 @@ end
 def lcm(a, b)
   return (a*b) / gcd(a, b)
 end
+
+# check if the given number is prime number
+def is_prime?(n)
+  return false if n == 1
+  return true if n == 2
+  return false if n % 2 == 0
+
+  3.step(Math.sqrt(n).ceil, 2) do |i|
+    return false if n % i == 0
+  end
+  
+  return true
+end
+
+

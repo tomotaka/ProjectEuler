@@ -1,4 +1,4 @@
-MAX = 400_000 - 1
+MAX = 400_0000 - 1
 
 def fib(max)
   before_n = 1

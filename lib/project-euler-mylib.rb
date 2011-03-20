@@ -1,3 +1,7 @@
+# load other files
+here = File.dirname(__FILE__)
+require File.expand_path("./set.rb", here)
+
 # create prime factor list of 'n'
 def factors(n)
   return [n] if n == 1
@@ -20,4 +24,31 @@ def factors(n)
     end
   end
   return ret
+end
+
+
+# greatest common divisor
+def gcd(a, b)
+  gcd = 1
+
+  no_update = false
+  while not no_update
+    no_update = true
+    2.upto([a,b].max) do |i|
+      if a % i == 0 && b % i == 0 then
+        a = a / i
+        b = b / i
+        no_update = false
+        gcd = gcd * i
+        break
+      end
+    end
+  end
+
+  return gcd
+end
+
+# least common multiple
+def lcm(a, b)
+  return (a*b) / gcd(a, b)
 end

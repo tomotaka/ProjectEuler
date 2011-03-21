@@ -26,6 +26,7 @@ void add_vec(struct factors* f, long n) {
     f->vecsize = f->vecsize + 10;
     f->vector = (long*)malloc(sizeof(long)*f->vecsize);
     memcpy(f->vector, tmpvector, sizeof(long)*tmpvecsize);
+    free(tmpvector);
   }
   f->vector[f->size++] = n;
 }

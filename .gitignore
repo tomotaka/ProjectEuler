@@ -1,5 +1,7 @@
 **/*.o
 
+.venv
+
 *.pyc
 
 .DS_Store

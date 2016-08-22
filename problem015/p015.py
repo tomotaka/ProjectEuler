@@ -13,6 +13,8 @@ def combination(a, b):
 
 
 def main():
+    """total operation: 20go-down + 20go-right = 40, problem is to
+    choice 20go-right(or down) operations from total 40 operations"""
     print combination(40, 20)
 
 
